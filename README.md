@@ -14,7 +14,7 @@ Attendance:
 
 
 
-Biweekly meeting 2 (Feb 11, 2021)
+Biweekly meeting 2 (Feb 11, 2021):
 Breakdown into different components, FE, BE, DB. 
 1.Assign task to each other
 2.Decide the number of end points
