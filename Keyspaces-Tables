@@ -1,0 +1,62 @@
+//Creation of Keyspace: Iglesia Vida
+
+cqlsh> CREATE KEYSPACE iglesia_vida
+   ... WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 3}; 
+
+//Creation of Username/Password Table
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE login(
+   usr_id int PRIMARY KEY,
+   usrname text,
+   password text
+   );
+
+//Creation of Ushers Table (ONLY 'UPDATE' PRIVILEGES OVER SUNDAY SERVICE/WEDNESDAY SERVICE/VISITORS INFO)
+//                          
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE ushers(
+   ushr_id int PRIMARY KEY,
+   first_name text,
+   last_name text,
+   usrname text
+   );
+   
+//Creation of Admin Table (ALL PRIVILEGES OVER SUNDAY SERVICE/WEDNESDAY SERVICE/VISITORS INFO)
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE admin(
+   ushr_id int PRIMARY KEY,
+   first_name text,
+   last_name text,
+   usrname text
+   );
+  
+//Creation of Sunday School Table
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE sunday_school(
+   ssch_id int PRIMARY KEY,
+   nursery varint,
+   pre_school varint,
+   kinder varint,
+   early_elementary varint,
+   late_elementary varint,
+   teach_assist varint
+   );
+   
+//Creation of Sunday Service Table
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE sunday_service(
+   ss_id int PRIMARY KEY,
+   sanctuary varint,
+   media_room varint,
+   ushers varint
+   );
+   
+//Creation of Sunday Visits and Baptism Table
+cqlsh> USE iglesia_vida;
+cqlsh:iglesia_vida> CREATE TABLE sunday_visit_bapt(
+   svb_id int PRIMARY KEY,
+   first_visitors varint,
+   water_bapt varint,
+   holy_g_bapt varint
+   );
+   
