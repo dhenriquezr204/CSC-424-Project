@@ -11,9 +11,31 @@ Attendance:
 6. Give access to certain users to a people database	//administrative roles/access
 7. Automated weekly/monthly reports through e-mail, line/bar graph analysis
 
+------------------------------------------------------------------------------------------
+WEEKLY MEETING THUR MARCH 07, 2021:
 
+NODEJS:
 
+1. We are to use ExpressJs
+2. Connect NodeJs to Cassandra, by the use of Cassandra Drivers (download @ GitHub). 
 
+MACHINE LEARNING:
+
+Applications to think about:
+1. Popular services
+2. What the best date, day of week, day of the month to have a service
+3. Bottle necks that prevent people from attending
+
+NodeJS can get data from Python.
+
+---------March Report: Upload a .txz .tgz file-----------
+
+-Design document
+-Database create code
+-Screenshots of website running
+-Running code
+
+------------------------------------------------------------------------------------------
 Biweekly meeting 2 (Feb 11, 2021):
 Breakdown into different components, FE, BE, DB. 
 1.Assign task to each other
